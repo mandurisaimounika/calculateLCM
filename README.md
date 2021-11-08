@@ -19,9 +19,14 @@ To run test cases:
 Route to calculate the LCM:
 ```http://localhost:8080/lcm?values=[2,3,4]```
 
+Status codes:
+1. ```200``` if the array of values are natural numbers ```Ex: [2,3,4]```.
+2. ```422``` if the array of values are less than two natural numbers.
+3. ```422``` if the array of values are not natural numbers.
+
 Methods Used: 
-1. ```is_Natural``` in the location ```utils/isNatural.js```
-2. ```lcm``` in the location ```utils/find-lcm.js```
+1. ```is_Natural``` in the location ```utils/isNatural.js``` to check if the array of values are natural numbers.
+2. ```lcm``` in the location ```utils/find-lcm.js``` to calculate the LCM of the natural numbers
 
 Router location:
  ```routes/get-lcm-route.js```
