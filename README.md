@@ -21,8 +21,8 @@ Route to calculate the LCM:
 
 Status codes:
 1. ```200``` if the array of values are natural numbers ```Ex: [2,3,4]```.
-2. ```422``` if the array of values are less than two natural numbers.
-3. ```422``` if the array of values are not natural numbers.
+2. ```422``` if the array of values are less than two natural numbers ```Ex: [2]```.
+3. ```422``` if the array of values are not natural numbers ```Ex:[2,3,4.5, 5.6]```.
 
 Methods Used: 
 1. ```is_Natural``` in the location ```utils/isNatural.js``` to check if the array of values are natural numbers.
