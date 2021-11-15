@@ -10,8 +10,8 @@ router.get('/lcm', (request, response, next) => {
           values     //values will be strings separated by ,
         } = request.query;
 
-        values = JSON.parse(values); // the typeof values will be string so we need to parse the array
-
+        values = values.includes('[') ? JSON.parse(values) : values.split(',').map(Number);  // the typeof values will be string so we need to parse the array
+       
        let notValid = values.length > 0 ? values.filter(value => !is_Natural(value)) : []; //filter and return the array of non-natural number
 
        if (notValid.length > 0) {  // if any non-natural number exists in array
